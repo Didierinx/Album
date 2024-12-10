@@ -36,6 +36,12 @@ const sections = [
         message: 'Este día aprendimos a nadar y descubrimos flores que son mariposas',
         character: 'img/david.png',
         dialogue: 'Fue una gran noche ksdj.'
+    },
+    {
+        photos: ['img/image26.png', 'img/image27.png', 'img/image28.png'],
+        message: 'Hoy descubrimos que la playa tiene nieve',
+        character: 'img/oshi.png',
+        dialogue: 'Trasnocharse una vez al año no hace daño.'
     }
 ];
 
