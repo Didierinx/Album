@@ -10,13 +10,13 @@ const sections = [
     {
         photos: ['img/image8.png', 'img/image10.png', 'img/image11.png'],
         message: 'Mi robloxiana favorita.',
-        character: 'img/Koi.png',
+        character: 'https://github.com/Didierinx/Album/blob/main/img/Koi.png?raw=true',
         dialogue: 'Tienes unos ojos preciosos.'
     },
     {
         photos: ['img/image4.png', 'img/image9.png', 'img/image13.png'],
         message: 'Te quiero más de lo que puedas imaginar.',
-        character: 'img/Take.png',
+        character: 'https://github.com/Didierinx/Album/blob/main/img/Take.png?raw=true',
         dialogue: 'Regresaría en el tiempo como Takemichi para volver a conocerte.'
     },
     {
