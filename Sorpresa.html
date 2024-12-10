@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo Melanie</title>
+    <link rel="stylesheet" href="Sorpresa.css">
+</head>
+<body>
+    <!-- Página Principal con Dedicatoria -->
+    <div id="main-page" class="main-page">
+        <div class="dedication-box">
+            <h1 class="dedication-text">Estoy muy agradecido y feliz de que formes parte de mi vida Melanie</h1>
+            <h2 class="dedication-text">Desde que te conocí hasta la actualidad</h2>
+            <h2 class="dedication-text">No voy a dejar de pensar que eres una chica tan linda en todos los sentidos</h2>
+            <h2 class="dedication-text">Y que cada segundo contigo es lo mejor de este mundo</h2>
+            <h2 class="dedication-text">A pesar de la distancia y que no te pueda ver</h2>
+            <h2 class="dedication-text">Eres una de las personas más importantes para mí</h2>
+            <h2 class="dedication-text">Te mereces todo lo bonito y más. TQM</h2>
+            <button class="enter-button" onclick="enterAlbum()">¡Para tí!</button>
+            <div id="image-view">
+                <img class="photo1" src="img/cat.jpg" alt="Foto 42">
+            </div>
+            <button onclick="playMusic()">Play Music</button>
+        </div>
+    </div>
+
+    <!-- Álbum de Fotos -->
+    <div id="album-page" class="album" style="display:none;">
+        <audio id="background-music" controls autoplay loop>
+            <source src="feel.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        
+
+        <div id="image-view">
+            <div class="gallery">
+                <img class="photo" src="img/image.png" alt="Foto 1">
+                <img class="photo" src="img/image2.png" alt="Foto 2">
+                <img class="photo" src="img/image3.png" alt="Foto 3">
+            </div>
+            <p id="photo-message">Gracias por ser esa persona que llena mi vida de felicidad</p>
+            <div class="nav-buttons">
+                <button onclick="prevSection()">&#9664; Anterior</button>
+                <button onclick="nextSection()">Siguiente &#9654;</button>
+            </div>
+        </div>
+
+        <!-- Añadido ID al contenedor del diálogo -->
+                <div class="character-section">
+                    <div class="character-container">
+                        <img src="img/denji.png" alt="Personaje 1" class="character" onclick="showDialogue()">
+                        <div class="dialogue-box" id="dialogue-box">You are special for me.</div>
+                    </div>
+                </div>
+
+            
+            </div>
+        
+    </div>
+
+    
+
+    <script src="Sorp.js"></script>
+</body>
+</html>

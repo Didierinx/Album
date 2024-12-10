@@ -1,0 +1,247 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.album {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+}
+
+#background-music {
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center; /* Centra las fotos horizontalmente */
+    align-items: center; /* Centra las fotos verticalmente */
+    flex-wrap: wrap; /* Permite que las fotos se muevan a la siguiente línea si no caben en una sola */
+    gap: 20px; /* Espacio entre las fotos */
+    margin: 0 auto; /* Centra la galería en la página */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+/*
+.photo {
+    width: 30%;
+    border-radius: 15px;
+    border: 2px solid #ff69b4;
+}
+
+*/
+
+#photo-message {
+    font-size: 1.5em;
+    color: #ff69b4;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.nav-buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff69b4;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2em;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493;
+    transform: translateY(-2px);
+}
+
+.character-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.character {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(80%);
+}
+
+.character:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+#dialogue-display {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #ff69b4;
+    font-style: italic;
+}
+
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dedication-box {
+    background-color: rgba(255, 20, 147, 0.2);
+    border: 3px solid #ff69b4;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5);
+}
+
+.dedication-text {
+    font-size: 2.5em;
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+    margin-bottom: 30px;
+    border-color: #fff;
+
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+        line-height: 0.70em;
+        outline: none;
+        animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+    {
+        0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+        {
+            color: #0e3742;
+            text-shadow: none;
+    
+        }
+    
+        18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92%
+        {
+            color: #fff;
+            text-shadow: 0 0 10px #fd00f1,
+            0 0 20px #fd00f1,
+            0 0 40px #fd00f1,
+            0 0 80px #fd00f1,
+            0 0 160px #fd00f1;
+        }
+
+}
+
+
+.enter-button {
+    background-color: #ff69b4;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.enter-button:hover {
+    background-color: #ff1493;
+    transform: translateY(-2px);
+}
+
+.album {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+}
+
+.photo {
+    width: 300px; /* Puedes ajustar el tamaño según tu preferencia */
+    height: 200px; /* Mantén la proporción o ajusta según tus necesidades */
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio, recortando si es necesario */
+    border-radius: 10px; /* Redondear las esquinas (opcional) */
+    margin: 10px; /* Espacio entre imágenes */
+    border: 2px solid #ff69b4
+}
+
+.photo1 {
+    width: 300px; /* Puedes ajustar el tamaño según tu preferencia */
+    height: 200px; /* Mantén la proporción o ajusta según tus necesidades */
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio, recortando si es necesario */
+    border-radius: 10px; /* Redondear las esquinas (opcional) */
+    margin: 10px; /* Espacio entre imágenes */
+    border: 2px solid #ff69b4
+}
+
+/* seccion anime */
+
+.character-section {
+    display: flex;
+    justify-content: space-around; /* Distribuye los personajes de manera uniforme */
+    margin-top: 20px; /* Espacio entre las fotos y los personajes */
+}
+
+.character-container {
+    position: relative;
+    text-align: center;
+
+}
+
+.character {
+    width: 200px; /* Tamaño del personaje */
+    cursor: pointer;
+}
+
+.dialogue-box {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    bottom: 120%; /* Posición sobre el personaje */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.character-container:hover .dialogue-box {
+    display: block; /* Muestra el diálogo al hacer clic */
+}
+
