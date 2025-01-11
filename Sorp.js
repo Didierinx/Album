@@ -42,7 +42,13 @@ const sections = [
         message: 'Hoy descubrimos que la playa tiene nieve',
         character: 'img/oshi.png',
         dialogue: 'Trasnocharse una vez al año no hace daño.'
-    }
+    },
+    {
+        photos: ['img/image29.jpg', 'img/image30.jpg', 'img/image31.png'],
+        message: 'Ella bien feliz con su skin de Toga',
+        character: 'img/ekko.png',
+        dialogue: 'Te mereces todas las cosas lindas de este mundo.'
+    },
 ];
 
 function updateSection() {
