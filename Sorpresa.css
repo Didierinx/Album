@@ -164,27 +164,26 @@ body {
 
 /* Tooltip para mostrar el diálogo */
 .character::after {
-    content: attr(data-dialogue);
+    content: attr(data-dialogue); /* Usa el atributo data-dialogue para el texto */
     position: absolute;
-    top: -30px; /* Coloca el texto arriba del personaje */
+    top: -50px; /* Ajusta para colocar el tooltip arriba */
     left: 50%;
     transform: translateX(-50%);
-    color: #ff69b4; /* Texto rosado */
+    color: #fff; /* Color del texto */
     font-size: 14px;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Efecto para resaltar el texto */
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    border-radius: 5px;
-    width: max-content;
-    max-width: 200px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra del cuadro */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    white-space: normal; /* Permite que el texto se ajuste si es muy largo */
+    max-width: 250px; /* Ancho máximo del tooltip */
     text-align: center;
+    opacity: 0; /* Oculta por defecto */
+    visibility: hidden; /* Oculta por defecto */
+    transition: opacity 0.3s, visibility 0.3s; /* Efecto de transición */
+    z-index: 10; /* Asegura que esté encima de otros elementos */
 }
 
 .character:hover::after {
