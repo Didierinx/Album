@@ -1,4 +1,3 @@
-// script.js
 let currentPage = 0;
 
 const pages = [
