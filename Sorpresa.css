@@ -1,247 +1,198 @@
-/* styles.css */
+/* Estilo general */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Fondo negro */
+    color: #ff69b4; /* Texto en rosado */
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
-.album {
-    background-color: #1c1c1c;
+/* Portada */
+.cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    width: 90%;
+    max-width: 800px;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5); /* Sombra rosada */
+}
+.album-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ff69b4; /* Rosado */
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.gif-container {
+    background: #333; /* Fondo gris oscuro */
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: none;
+}
+
+
+.open-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-button:hover {
+    background-color: #ff1493;
+}
+
+
+/* Álbum */
+.album {
+    width: 90%;
     max-width: 800px;
-    text-align: center;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5); /* Sombra rosada */
+    padding: 20px;
     position: relative;
 }
 
-#background-music {
-    display: none;
-}
-
-.gallery {
+.page {
     display: flex;
-    justify-content: center; /* Centra las fotos horizontalmente */
-    align-items: center; /* Centra las fotos verticalmente */
-    flex-wrap: wrap; /* Permite que las fotos se muevan a la siguiente línea si no caben en una sola */
-    gap: 20px; /* Espacio entre las fotos */
-    margin: 0 auto; /* Centra la galería en la página */
-    padding: 20px; /* Espacio interno */
-    box-sizing: border-box; /* Incluye padding en el tamaño total */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/*
 .photo {
     width: 30%;
-    border-radius: 15px;
-    border: 2px solid #ff69b4;
-}
-
-*/
-
-#photo-message {
-    font-size: 1.5em;
-    color: #ff69b4;
-    margin: 15px 0;
-    font-style: italic;
-}
-
-.nav-buttons {
-    margin-top: 20px;
-}
-
-button {
-    background-color: #ff69b4;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1.2em;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
     margin: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.5);
-    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #ff69b4; /* Borde rosado */
 }
 
-button:hover {
-    background-color: #ff1493;
-    transform: translateY(-2px);
-}
-
-.character-section {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+.photo2 {
+    width: 300px; /* Puedes ajustar el tamaño según tu preferencia */
+    height: 200px; /* Mantén la proporción o ajusta según tus necesidades */
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio, recortando si es necesario */
+    border-radius: 10px; /* Redondear las esquinas (opcional) */
+    margin: 10px; /* Espacio entre imágenes */
+    border: 2px solid #ff69b4
 }
 
 .character {
-    width: 150px;
+    width: 200px; /* Ajusta el tamaño según el diseño */
+    border-radius: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
     cursor: pointer;
-    transition: transform 0.3s, filter 0.3s;
-    filter: grayscale(80%);
+    margin-bottom: 20px;
+    text-align: center;
+    background: none; /* Elimina el fondo gris */
+}
+
+
+
+.character img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen del personaje */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    pointer-events: none; /* Evita que el personaje interfiera con los eventos de ratón */
+    background-color: transparent; /* Asegura que el fondo de la imagen sea transparente */
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin: 10px 0;
+    background-color: none; /* Fondo gris oscuro */
+    color: #ff69b4; /* Texto rosado */
+}
+
+/* Navegación */
+.navigation button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation button:hover {
+    background-color: #ff1493;
+}
+
+
+/* Tooltip para mostrar el diálogo */
+.character::after {
+    content: attr(data-dialogue);
+    position: absolute;
+    top: -30px; /* Coloca el texto arriba del personaje */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff69b4; /* Texto rosado */
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Efecto para resaltar el texto */
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+}
+
+.character:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .character:hover {
     transform: scale(1.1);
     filter: grayscale(0%);
 }
-
-#dialogue-display {
-    margin-top: 30px;
-    font-size: 1.5em;
-    color: #ff69b4;
-    font-style: italic;
-}
-
-/* styles.css */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.main-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.dedication-box {
-    background-color: rgba(255, 20, 147, 0.2);
-    border: 3px solid #ff69b4;
-    padding: 50px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5);
-}
-
-.dedication-text {
-    font-size: 2.5em;
-    color: #ff69b4;
-    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
-    margin-bottom: 30px;
-    border-color: #fff;
-
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
-        line-height: 0.70em;
-        outline: none;
-        animation: animate 5s linear infinite;
-}
-
-@keyframes animate
-    {
-        0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
-        {
-            color: #0e3742;
-            text-shadow: none;
-    
-        }
-    
-        18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92%
-        {
-            color: #fff;
-            text-shadow: 0 0 10px #fd00f1,
-            0 0 20px #fd00f1,
-            0 0 40px #fd00f1,
-            0 0 80px #fd00f1,
-            0 0 160px #fd00f1;
-        }
-
-}
-
-
-.enter-button {
-    background-color: #ff69b4;
-    border: none;
-    padding: 15px 30px;
-    color: white;
-    font-size: 1.5em;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.5);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.enter-button:hover {
-    background-color: #ff1493;
-    transform: translateY(-2px);
-}
-
-.album {
-    background-color: #1c1c1c;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    max-width: 800px;
-    text-align: center;
-    position: relative;
-}
-
-.photo {
-    width: 300px; /* Puedes ajustar el tamaño según tu preferencia */
-    height: 200px; /* Mantén la proporción o ajusta según tus necesidades */
-    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio, recortando si es necesario */
-    border-radius: 10px; /* Redondear las esquinas (opcional) */
-    margin: 10px; /* Espacio entre imágenes */
-    border: 2px solid #ff69b4
-}
-
-.photo1 {
-    width: 300px; /* Puedes ajustar el tamaño según tu preferencia */
-    height: 200px; /* Mantén la proporción o ajusta según tus necesidades */
-    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio, recortando si es necesario */
-    border-radius: 10px; /* Redondear las esquinas (opcional) */
-    margin: 10px; /* Espacio entre imágenes */
-    border: 2px solid #ff69b4
-}
-
-/* seccion anime */
-
-.character-section {
-    display: flex;
-    justify-content: space-around; /* Distribuye los personajes de manera uniforme */
-    margin-top: 20px; /* Espacio entre las fotos y los personajes */
-}
-
-.character-container {
-    position: relative;
-    text-align: center;
-
-}
-
-.character {
-    width: 200px; /* Tamaño del personaje */
-    cursor: pointer;
-}
-
-.dialogue-box {
-    display: none; /* Oculto por defecto */
-    position: absolute;
-    bottom: 120%; /* Posición sobre el personaje */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    width: max-content;
-    max-width: 200px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.character-container:hover .dialogue-box {
-    display: block; /* Muestra el diálogo al hacer clic */
-}
-
