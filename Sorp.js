@@ -1,6 +1,7 @@
 // script.js
-let currentSection = 0;
-const sections = [
+let currentPage = 0;
+
+const pages = [
     {
         photos: ['img/image.png', 'img/image2.png', 'img/image3.png'],
         message: 'Gracias por ser esa persona que llena mi vida de felicidad.',
@@ -10,13 +11,13 @@ const sections = [
     {
         photos: ['img/image8.png', 'img/image10.png', 'img/image11.png'],
         message: 'Mi robloxiana favorita.',
-        character: 'https://github.com/Didierinx/Album/blob/main/img/Koi.png?raw=true',
+        character: 'img/koi.png',
         dialogue: 'Tienes unos ojos preciosos.'
     },
     {
         photos: ['img/image4.png', 'img/image9.png', 'img/image13.png'],
         message: 'Te quiero más de lo que puedas imaginar.',
-        character: 'https://github.com/Didierinx/Album/blob/main/img/Take.png?raw=true',
+        character: 'img/take.png',
         dialogue: 'Regresaría en el tiempo como Takemichi para volver a conocerte.'
     },
     {
@@ -48,58 +49,39 @@ const sections = [
         message: 'Ella bien feliz con su skin de Toga',
         character: 'img/ekko.png',
         dialogue: 'Te mereces todas las cosas lindas de este mundo.'
-    },
+    }
 ];
 
-function updateSection() {
-    const section = sections[currentSection];
-    const images = document.querySelectorAll('.photo');
-    images.forEach((img, index) => {
-        img.src = section.photos[index];
-    });
-    document.getElementById('photo-message').textContent = section.message;
-    document.querySelector('.character').src = section.character;
-    document.querySelector('#dialogue-box').textContent = section.dialogue;
+function openAlbum() {
+    document.getElementById('cover').style.display = 'none';
+    document.getElementById('album').style.display = 'block';
+    updatePage();
 }
 
-function prevSection() {
-    if (currentSection > 0) {
-        currentSection--;
-    } else {
-        currentSection = sections.length - 1;
-    }
-    updateSection();
-}
+function updatePage() {
+    const page = pages[currentPage];
 
-function nextSection() {
-    if (currentSection < sections.length - 1) {
-        currentSection++;
-    } else {
-        currentSection = 0;
-    }
-    updateSection();
-}
-
-function showDialogue() {
-    const dialogueBox = document.querySelector('#dialogue-box');
-    dialogueBox.style.display = 'block';
+    // Actualiza las fotos
+    document.getElementById('photo1').style.backgroundImage = `url('${page.photos[0]}')`;
+    document.getElementById('photo2').style.backgroundImage = `url('${page.photos[1]}')`;
+    document.getElementById('photo3').style.backgroundImage = `url('${page.photos[2]}')`;
     
-    // Opcional: ocultar el diálogo después de unos segundos
-    setTimeout(() => {
-        dialogueBox.style.display = 'none';
-    }, 3000); // Se oculta después de 3 segundos
+    // Actualiza el mensaje
+    document.getElementById('message').textContent = page.message;
+
+    // Actualiza el personaje
+    const characterElement = document.getElementById('character');
+    characterElement.innerHTML = `<img src="${page.character}" alt="Personaje" />`;
+    characterElement.setAttribute('data-dialogue', page.dialogue);
 }
 
-
-// script.js
-function enterAlbum() {
-    document.getElementById('main-page').style.display = 'none';
-    document.getElementById('album-page').style.display = 'block';
+function prevPage() {
+    currentPage = (currentPage > 0) ? currentPage - 1 : pages.length - 1;
+    updatePage();
 }
 
-function playMusic() {
-    const audio = document.getElementById('background-music');
-    audio.play();
+function nextPage() {
+    currentPage = (currentPage < pages.length - 1) ? currentPage + 1 : 0;
+    updatePage();
 }
-
 
