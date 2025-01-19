@@ -50,10 +50,10 @@ const pages = [
         dialogue: 'Te mereces todas las cosas lindas de este mundo.'
     },
     {
-        photos: ['img/image32.png', 'img/image33.png', 'img/image34.png'],
-        message: 'Ella bien feliz con su skin de Toga',
-        character: 'img/ekko.png',
-        dialogue: 'Te mereces todas las cosas lindas de este mundo.'
+        photos: ['img/image32.jpg', 'img/image33.jpg', 'img/image34.png'],
+        message: 'Hoy cerraron tiktok pero la pasamos bonito kjds',
+        character: 'img/hina.png',
+        dialogue: 'Me gusta ver peliculas junto a tí'
     }
 ];
 
