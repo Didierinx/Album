@@ -56,7 +56,7 @@ const pages = [
         dialogue: 'Me gusta ver peliculas junto a tí.'
     },
     {
-        photos: ['img/image35.jpg', 'Demon.mp4', 'Lolsito.mp4'],
+        photos: ['img/image35.jpeg', 'Demon.mp4', 'Lolsito.mp4'],
         message: 'Gracias por hacer mis vacaciones mas bonitas contigo',
         character: 'img/Name.png',
         dialogue: 'Tengo miedo a perderte sjkds'
