@@ -51,9 +51,15 @@ const pages = [
     },
     {
         photos: ['img/image32.jpg', 'img/image33.jpg', 'img/image34.png'],
-        message: 'Hoy cerraron tiktok pero la pasamos bonito kjds',
+        message: 'Hoy cerraron tiktok pero la pasamos lindo kjds',
         character: 'img/hina.png',
-        dialogue: 'Me gusta ver peliculas junto a tí'
+        dialogue: 'Me gusta ver peliculas junto a tí.'
+    },
+    {
+        photos: ['img/image35.jpg', 'Demon.mp4', 'Lolsito.mp4'],
+        message: 'Gracias por hacer mis vacaciones mas bonitas contigo',
+        character: 'img/Name.png',
+        dialogue: 'Tengo miedo a perderte sjkds'
     }
 ];
 
